@@ -25,7 +25,10 @@ module.exports.routes = {
   'GET /users/info': 'UsersController.user',
   'POST /auth/login': 'AuthController.login',
   'POST /auth/register': 'AuthController.register',
-  '/auth/logout': 'AuthController.logout'
+  '/auth/logout': 'AuthController.logout',
+
+  'POST /todos/:id/done': 'TodosController.markAsdone',
+  'POST /todos/:id/undone': 'TodosController.unDone',
 
 
   /***************************************************************************
