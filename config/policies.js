@@ -12,8 +12,5 @@
 module.exports.policies = {
   TodosController: {
     '*': 'isAuthenticated',
-
-    // Allow anyone to access the login action, even if they're not logged in.
-    // 'login': true
   }
 };

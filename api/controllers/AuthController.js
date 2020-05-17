@@ -36,15 +36,13 @@ module.exports = {
             req.logIn(user, function(err) {
                 if(err) res.send(err);
                 const payload = {
-                    sub: req.body.username,
+                    sub: user.username,
                     iat: new Date().getTime()
-                 };
-                 const SECRET = "secret";
-
+                };
                 return res.ok({
                     id: user.id,
                     username: user.username,
-                    access_token: jwt.sign(payload, SECRET)
+                    access_token: jwt.sign(payload, sails.config.jwt.secret)
                 });
             });
         })(req, res);
@@ -59,17 +57,7 @@ module.exports = {
             }
             req.logIn(user, function(err) {
                 if(err) res.send(err);
-                const payload = {
-                    sub: req.body.username,
-                    iat: new Date().getTime()
-                 };
-                 const SECRET = "secret";
-
-                return res.view('pages/userInfo', {
-                    id: user.id,
-                    username: user.username,
-                    access_token: jwt.sign(payload, SECRET)
-                });
+                res.redirect('/user')
             });
         })(req, res);
     },
