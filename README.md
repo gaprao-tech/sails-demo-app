@@ -2,6 +2,20 @@
 
 a [Sails v1](https://sailsjs.com) application
 
+### APIs
+#### Auth & User
+* Login page `GET /login`
+* Register page `GET /register`
+* User info page `GET /user`
+* REST Login `GET /auth/login`
+* REST register `GET /auth/register`
+
+#### Todo
+* List items `GET /todos`
+* Creaet item `POST /todos`
+* Remove item `DELETE /todos/:id`
+* Mark item as done `PATCH /todos/:id/done`
+* Mark item as not done yet `PATCH /todos/:id/undone`
 
 ### Links
 
