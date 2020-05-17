@@ -22,7 +22,6 @@ module.exports = {
     })(req, res);
   },
   userView: async(req, res) => {
-    console.log(req.session)
     let userID = req.session && req.session.passport && req.session.passport.user
     if (!userID) {
       return res.status(401).json({error: 'unauthorized'})
