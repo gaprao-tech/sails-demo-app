@@ -21,7 +21,9 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
   'GET /login': { view: 'pages/login' },
+  'POST /login': 'AuthController.loginView',
   'GET /register': { view: 'pages/register' },
+  'POST /register': 'AuthController.registerView',
   'GET /users/info': 'UsersController.user',
   'POST /auth/login': 'AuthController.login',
   'POST /auth/register': 'AuthController.register',
