@@ -8,15 +8,12 @@
  * https://sailsjs.com/docs/concepts/policies
  */
 
+
 module.exports.policies = {
+  TodosController: {
+    '*': 'isAuthenticated',
 
-  /***************************************************************************
-  *                                                                          *
-  * Default policy for all controllers and actions, unless overridden.       *
-  * (`true` allows public access)                                            *
-  *                                                                          *
-  ***************************************************************************/
-
-  // '*': true,
-
+    // Allow anyone to access the login action, even if they're not logged in.
+    // 'login': true
+  }
 };

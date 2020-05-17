@@ -27,8 +27,11 @@ module.exports.routes = {
   'POST /auth/register': 'AuthController.register',
   '/auth/logout': 'AuthController.logout',
 
-  'POST /todos/:id/done': 'TodosController.markAsdone',
-  'POST /todos/:id/undone': 'TodosController.unDone',
+  'GET /todos': 'TodosController.list',
+  'POST /todos': 'TodosController.add',
+  'DELETE /todos/:id': 'TodosController.delete',
+  'PATCH /todos/:id/done': 'TodosController.markAsdone',
+  'PATCH /todos/:id/undone': 'TodosController.unDone',
 
 
   /***************************************************************************

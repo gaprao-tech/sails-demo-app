@@ -32,10 +32,9 @@ module.exports = {
                 if(err) res.send(err);
                 const payload = {
                     sub: req.body.username,
-                    iat: new Date().getTime()//มาจากคำว่า issued at time (สร้างเมื่อ)
+                    iat: new Date().getTime()
                  };
-                 const SECRET = "secret"; //ในการใช้งานจริง คีย์นี้ให้เก็บเป็นความลับ
-                //  res.send(jwt.encde(payload, SECRET));
+                 const SECRET = "secret";
 
                 return res.ok({
                 email: user.email,

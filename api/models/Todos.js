@@ -8,8 +8,7 @@
 module.exports = {
 
   attributes: {
-    name: {type: 'string', required: true},
-    category: {type: 'string'},
+    todo: {type: 'string', required: true},
     status: {type: 'string', isIn: ['done', 'active'], defaultsTo: 'active'},
     username: {type: 'string', required: true} 
   },
